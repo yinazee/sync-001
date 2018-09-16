@@ -1,23 +1,517 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RailsAmusementPark</title>
-    <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <head>
+      <link rel="stylesheet" href="/assests/stylesheets/application.css.scss"/>
+
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+     <link rel="pingback" href="http://dazzlersoftware.com/demo/construction-blue/xmlrpc.php">
+     <title>Construction Blue – Just another demo Sites site</title>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//s.w.org">
+  <link rel="alternate" type="application/rss+xml" title="Construction Blue » Feed" href="http://dazzlersoftware.com/demo/construction-blue/feed/">
+  <link rel="alternate" type="application/rss+xml" title="Construction Blue » Comments Feed" href="http://dazzlersoftware.com/demo/construction-blue/comments/feed/">
+  		<script type="text/javascript">
+  			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/dazzlersoftware.com\/demo\/construction-blue\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"}};
+  			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+  		</script><script src="http://dazzlersoftware.com/demo/construction-blue/wp-includes/js/wp-emoji-release.min.js?ver=4.9.8" type="text/javascript" defer=""></script>
+  		<style type="text/css">
+  img.wp-smiley,
+  img.emoji {
+  	display: inline !important;
+  	border: none !important;
+  	box-shadow: none !important;
+  	height: 1em !important;
+  	width: 1em !important;
+  	margin: 0 .07em !important;
+  	vertical-align: -0.1em !important;
+  	background: none !important;
+  	padding: 0 !important;
+  }
+  </style>
+  <link rel="stylesheet" id="contact-form-7-css" href="http://dazzlersoftware.com/demo/construction-blue/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.0.2" type="text/css" media="all">
+  <link rel="stylesheet" id="fvp-frontend-css" href="http://dazzlersoftware.com/demo/construction-blue/wp-content/plugins/featured-video-plus/styles/frontend.css?ver=2.3.3" type="text/css" media="all">
+  <link rel="stylesheet" id="progress_wp_br_bootstrap-css" href="http://dazzlersoftware.com/demo/construction-blue/wp-content/plugins/progress-bar-wp/assets/css/bootstrap.css?ver=4.9.8" type="text/css" media="all">
+  <link rel="stylesheet" id="progr_wp_b-font-awesome-css" href="http://dazzlersoftware.com/demo/construction-blue/wp-content/plugins/progress-bar-wp/assets/css/font-awesome/css/font-awesome.min.css?ver=4.9.8" type="text/css" media="all">
+  <link rel="stylesheet" id="progr_wp_jq-ae-css" href="http://dazzlersoftware.com/demo/construction-blue/wp-content/plugins/progress-bar-wp/assets/css/meanmenu.min.css?ver=4.9.8" type="text/css" media="all">
+  <link rel="stylesheet" id="progr_wp_animate-ae-css" href="http://dazzlersoftware.com/demo/construction-blue/wp-content/plugins/progress-bar-wp/assets/css/animate.min.css?ver=4.9.8" type="text/css" media="all">
+  <link rel="stylesheet" id="bootstrap-css" href="http://dazzlersoftware.com/demo/construction-blue/wp-content/themes/construction-zone/assets/css/bootstrap.css?ver=4.9.8" type="text/css" media="all">
+  <link rel="stylesheet" id="construction-zone-font-Raleway-css" href="https://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,300,200,100" type="text/css" media="all">
+  <link rel="stylesheet" id="construction-zone-font-opensans-css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400,600,700" type="text/css" media="all">
+  <link rel="stylesheet" id="font-awesome-css" href="http://dazzlersoftware.com/demo/construction-blue/wp-content/themes/construction-zone/assets/css/font-awesome.css?ver=4.9.8" type="text/css" media="all">
+  <link rel="stylesheet" id="meanmenu-css" href="http://dazzlersoftware.com/demo/construction-blue/wp-content/themes/construction-zone/assets/css/meanmenu.css?ver=4.9.8" type="text/css" media="all">
+  <link rel="stylesheet" id="nivo-slider-css" href="http://dazzlersoftware.com/demo/construction-blue/wp-content/themes/construction-zone/assets/css/nivo-slider.css?ver=4.9.8" type="text/css" media="all">
+  <link rel="stylesheet" id="construction-zone-style-css" href="http://dazzlersoftware.com/demo/construction-blue/wp-content/themes/blue-construction/style.css?ver=4.9.8" type="text/css" media="all">
+  <link rel="stylesheet" id="responsive-css" href="http://dazzlersoftware.com/demo/construction-blue/wp-content/themes/construction-zone/assets/css/responsive.css?ver=4.9.8" type="text/css" media="all">
+  <link rel="stylesheet" id="blue-construction-parent-style-css" href="http://dazzlersoftware.com/demo/construction-blue/wp-content/themes/construction-zone/style.css?ver=4.9.8" type="text/css" media="all">
+  <link rel="stylesheet" id="blue-construction-blue-style-css" href="http://dazzlersoftware.com/demo/construction-blue/wp-content/themes/blue-construction/css/blue.css?ver=4.9.8" type="text/css" media="all">
+  <script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+  <script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+  <script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/plugins/featured-video-plus/js/jquery.fitvids.min.js?ver=master-2015-08"></script>
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var fvpdata = {"ajaxurl":"http:\/\/dazzlersoftware.com\/demo\/construction-blue\/wp-admin\/admin-ajax.php","nonce":"e6aed73c89","fitvids":"1","dynamic":"","overlay":"","opacity":"0.75","color":"b","width":"640"};
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/plugins/featured-video-plus/js/frontend.min.js?ver=2.3.3"></script>
+  <link rel="https://api.w.org/" href="http://dazzlersoftware.com/demo/construction-blue/wp-json/">
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://dazzlersoftware.com/demo/construction-blue/xmlrpc.php?rsd">
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://dazzlersoftware.com/demo/construction-blue/wp-includes/wlwmanifest.xml">
+  <meta name="generator" content="WordPress 4.9.8">
+  <link rel="canonical" href="http://dazzlersoftware.com/demo/construction-blue/">
+  <link rel="shortlink" href="http://dazzlersoftware.com/demo/construction-blue/">
+  <link rel="alternate" type="application/json+oembed" href="http://dazzlersoftware.com/demo/construction-blue/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fdazzlersoftware.com%2Fdemo%2Fconstruction-blue%2F">
+  <link rel="alternate" type="text/xml+oembed" href="http://dazzlersoftware.com/demo/construction-blue/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fdazzlersoftware.com%2Fdemo%2Fconstruction-blue%2F&amp;format=xml">
+  		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+
+
   </head>
   <body>
+
+						<ul style="display: none;"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-105 current_page_item menu-item-156 active"><a title="Home" href="http://dazzlersoftware.com/demo/construction-blue/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a title="About Company" href="http://dazzlersoftware.com/demo/construction-blue/about-company/">About Company</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-158"><a title="Blog" href="http://dazzlersoftware.com/demo/construction-blue/blog/">Blog</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-160 dropdown"><a title="Menu" href="#" data-toggle="dropdown" class="sub-siblings" aria-haspopup="true">Menu <span class=""></span></a>
+<ul role="menu" class=" sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-161"><a title="Sub Menu A" href="#">Sub Menu A</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-162 dropdown"><a title="Sub Menu B" href="#">Sub Menu B</a>
+	<ul role="menu" class=" sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164"><a title="Submenu D" href="#">Submenu D</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-165"><a title="Submenu E" href="#">Submenu E</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-166"><a title="Submenu F" href="#">Submenu F</a></li>
+	</ul>
+<a class="mean-expand" href="#" style="font-size: 18px">+</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-163"><a title="Sub Menu C" href="#">Sub Menu C</a></li>
+</ul>
+<a class="mean-expand" href="#" style="font-size: 18px">+</a></li>
+</ul>
+						</nav></div>
+<div class="wrapper-area" style="padding-top: 0px;">
+<!-- Header Area Start Here -->
+
+<header>
+	<div class="header-style1-area">
+				<div class="header-top-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+						<div class="header-top-left">
+							<ul>
+																	<li><i class="fa fa-phone" aria-hidden="true"></i><a href="#">
+									(+123) 91 234 5678</a></li>
+
+														<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">contact@info.com</a></li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+						<div class="header-top-right">
+							<ul>
+															<li><a aria-hidden="true" href="#"><i class="fa fa-facebook"></i></a></li>
+
+								<li><a aria-hidden="true" href="#"><i class="fa fa-twitter"></i></a></li>
+
+								<li><a aria-hidden="true" href="#"><i class="fa fa-instagram"></i></a></li>
+
+								<li><a aria-hidden="true" href="#"><i class="fa fa-youtube"></i></a></li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="main-header-area" id="sticker">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+						<div class="main-menu-area">
+						 <nav>
+							   <ul><li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-105 current_page_item menu-item-156 active"><a title="Home" href="http://dazzlersoftware.com/demo/construction-blue/">Home</a></li>
+<li id="menu-item-157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a title="About Company" href="http://dazzlersoftware.com/demo/construction-blue/about-company/">About Company</a></li>
+<li id="menu-item-158" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-158"><a title="Blog" href="http://dazzlersoftware.com/demo/construction-blue/blog/">Blog</a></li>
+<li id="menu-item-160" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-160 dropdown"><a title="Menu" href="#" data-toggle="dropdown" class="sub-siblings" aria-haspopup="true">Menu <span class=""></span></a>
+<ul role="menu" class=" sub-menu">
+	<li id="menu-item-161" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-161"><a title="Sub Menu A" href="#">Sub Menu A</a></li>
+	<li id="menu-item-162" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-162 dropdown"><a title="Sub Menu B" href="#">Sub Menu B</a>
+	<ul role="menu" class=" sub-menu">
+		<li id="menu-item-164" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164"><a title="Submenu D" href="#">Submenu D</a></li>
+		<li id="menu-item-165" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-165"><a title="Submenu E" href="#">Submenu E</a></li>
+		<li id="menu-item-166" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-166"><a title="Submenu F" href="#">Submenu F</a></li>
+	</ul>
+</li>
+	<li id="menu-item-163" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-163"><a title="Sub Menu C" href="#">Sub Menu C</a></li>
+</ul>
+</li>
+
+</ul>
+					  </nav>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+			<!-- Mobile Menu Area Start -->
+		<div class="mobile-menu-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mobile-menu">
+						<div class="mean-push"></div><nav id="dropdown" style="display: none;">
+						<ul><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-105 current_page_item menu-item-156 active"><a title="Home" href="http://dazzlersoftware.com/demo/construction-blue/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a title="About Company" href="http://dazzlersoftware.com/demo/construction-blue/about-company/">About Company</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-158"><a title="Blog" href="http://dazzlersoftware.com/demo/construction-blue/blog/">Blog</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-160 dropdown"><a title="Menu" href="#" data-toggle="dropdown" class="sub-siblings" aria-haspopup="true">Menu <span class=""></span></a>
+<ul role="menu" class=" sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-161"><a title="Sub Menu A" href="#">Sub Menu A</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-162 dropdown"><a title="Sub Menu B" href="#">Sub Menu B</a>
+	<ul role="menu" class=" sub-menu">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164"><a title="Submenu D" href="#">Submenu D</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-165"><a title="Submenu E" href="#">Submenu E</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-166"><a title="Submenu F" href="#">Submenu F</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-163"><a title="Sub Menu C" href="#">Sub Menu C</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-159"><a title="Sample Page" href="http://dazzlersoftware.com/demo/construction-blue/sample-page-2/">Sample Page</a></li>
+</ul>
+						</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Mobile Menu Area End -->
+	</div>
+</header>
+<!-- Header Area End Here --><!-- Image Area Start Here -->
+	<div class="slider-area">
+		<div class="overlay"></div>
+		<div class="preview-1 img-responsive" style="background: url('http://dazzlersoftware.com/demo/construction-blue/wp-content/uploads/sites/4/2018/07/crane-3143808_1920.jpg') no-repeat center center; ">
+			<!-- Direction 1 -->
+				<div class="nivo-caption" style="display: block;">
+				<div class="slider-content t-cn s-tb slider-1">
+					<div class="title-container s-tb-c title-compress">
+													<h1 class="title1">
+								Best Construction Theme							</h1>
+												<div class="details-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu diam lorem.	</p>
+						</div>
+						<div class="read-more">
+							<ul>
+																	<li><a href="#">
+									Read More									</a></li>
+
+									<li><a href="#">
+									Contact U Now									</a></li>
+															</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Image Area End Here -->
+
+<!-- Page About Us Area Start Here -->
+<div class="page-about-us-area section-space">
+	<div class="container">
+		<div class="row">
+								<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+					<div class="page-about-us-left">
+						<h2>About Company</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis. Pellentesque cursus arcu id magna euismod in elementum purus molestie. Curabitur pellentesque massa eu nulla consequat sed porttitor arcu porttitor. Quisque volutpat pharetra felis, eu cursus lorem molestie vitae. Nulla vehicula, lacus ut suscipit fermentum, turpis felis ultricies dui, ut rhoncus libero augue at libero. Morbi ut arcu dolor. Maecenas id nulla nec nibh viverra vehicula. Cras feugiat, magna eu lacinia ullamcorper, augue est sodales nibh, ut vulputate augue est sed nunc. Suspendisse sagittist.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
+<p>&nbsp;</p>
+
+
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+					<div class="page-about-us-right">
+						<img width="1170" height="781" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/uploads/sites/4/2018/07/post-2.jpg" class="attachment- size- wp-post-image" alt="" srcset="http://dazzlersoftware.com/demo/construction-blue/wp-content/uploads/sites/4/2018/07/post-2.jpg 1170w, http://dazzlersoftware.com/demo/construction-blue/wp-content/uploads/sites/4/2018/07/post-2-300x200.jpg 300w, http://dazzlersoftware.com/demo/construction-blue/wp-content/uploads/sites/4/2018/07/post-2-768x513.jpg 768w, http://dazzlersoftware.com/demo/construction-blue/wp-content/uploads/sites/4/2018/07/post-2-1024x684.jpg 1024w" sizes="(max-width: 1170px) 100vw, 1170px">					</div>
+				</div>
+
+		</div>
+	</div>
+</div>
+<!-- Page About Us Area End Here -->
+
+<!-- Page About Us Details Area Start Here -->
+<div class="page-about-us-details-area section-space-110-64">
+	<div class="container">
+					<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="section-title-area">
+						<h2 class="section-title">
+						Our Services</h2>
+						<div class="title-bottom-icon">
+							<span class="title-bottom-border"></span>
+						</div>
+						<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm dipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore.</p>
+					</div>
+				</div>
+			</div>
+				<div class="row inner-section-space-top">
+
+			<div class="col-lg- col-md- col-sm-4 col-xs-12">
+				<div class="page-about-us-details-box margin-b-30">
+					<a href="http://dazzlersoftware.com/demo/construction-blue/service-1/"><i class="fa fa fa-building" aria-hidden="true"></i></a>
+					<h3><a href="http://dazzlersoftware.com/demo/construction-blue/service-1/">Service 1</a></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod vitae erat eget consequat. Integer id suscipit lacus</p>
+				</div>
+			</div>
+
+			<div class="col-lg- col-md- col-sm-4 col-xs-12">
+				<div class="page-about-us-details-box margin-b-30">
+					<a href="http://dazzlersoftware.com/demo/construction-blue/service-2/"><i class="fa fa fa-lightbulb-o" aria-hidden="true"></i></a>
+					<h3><a href="http://dazzlersoftware.com/demo/construction-blue/service-2/">Service 2</a></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod vitae erat eget consequat. Integer id suscipit lacus</p>
+				</div>
+			</div>
+
+			<div class="col-lg- col-md- col-sm-4 col-xs-12">
+				<div class="page-about-us-details-box margin-b-30">
+					<a href="http://dazzlersoftware.com/demo/construction-blue/service-3/"><i class="fa fa fa-map" aria-hidden="true"></i></a>
+					<h3><a href="http://dazzlersoftware.com/demo/construction-blue/service-3/">Service 3</a></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod vitae erat eget consequat. Integer id suscipit lacus</p>
+				</div>
+			</div>
+
+			<div class="col-lg- col-md- col-sm-4 col-xs-12">
+				<div class="page-about-us-details-box margin-b-30">
+					<a href="http://dazzlersoftware.com/demo/construction-blue/service-4-2/"><i class="fa fa fa-send-o" aria-hidden="true"></i></a>
+					<h3><a href="http://dazzlersoftware.com/demo/construction-blue/service-4-2/">Service 4</a></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod vitae erat eget consequat. Integer id suscipit lacus</p>
+				</div>
+			</div>
+
+			<div class="col-lg- col-md- col-sm-4 col-xs-12">
+				<div class="page-about-us-details-box margin-b-30">
+					<a href="http://dazzlersoftware.com/demo/construction-blue/service-5/"><i class="fa fa fa-trophy" aria-hidden="true"></i></a>
+					<h3><a href="http://dazzlersoftware.com/demo/construction-blue/service-5/">Service 5</a></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod vitae erat eget consequat. Integer id suscipit lacus</p>
+				</div>
+			</div>
+
+			<div class="col-lg- col-md- col-sm-4 col-xs-12">
+				<div class="page-about-us-details-box margin-b-30">
+					<a href="http://dazzlersoftware.com/demo/construction-blue/service-6/"><i class="fa fa fa-cube" aria-hidden="true"></i></a>
+					<h3><a href="http://dazzlersoftware.com/demo/construction-blue/service-6/">Service 6</a></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod vitae erat eget consequat. Integer id suscipit lacus</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+ <!-- Page About Us Details Area End Here -->
+ <!-- News Area Start Here -->
+
+	<div class="news-area section-space-88-100">
+		<div class="container">
+							<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="section-title-area">
+							<h2 class="section-title">Our Recent Post</h2>
+							<div class="title-bottom-icon">
+								<span class="title-bottom-border"></span>
+							</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm dipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore.</p>
+						</div>
+					</div>
+				</div>
+						<div class="row inner-section-space-top">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+							<div class="inner-news-box-top" id="post-102">
+																<div class="news-published">
+									<p class="news-date">
+									6									<br>
+									Mar</p>
+									<p class="news-year">
+									2018</p>
+								</div>
+								<a href="http://dazzlersoftware.com/demo/construction-blue/2018/03/06/a-great-personality-in-the-world-what-he-use-for-his-personality/" class="img-responsive"><img width="360" height="244" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/uploads/sites/4/2018/03/beanie-2591388_1920-360x244.jpg" class="attachment-construction_zone-photo-home size-construction_zone-photo-home wp-post-image" alt="">								</a>
+															</div>
+							<div class="inner-news-box-bottom">
+								<h4><a href="http://dazzlersoftware.com/demo/construction-blue/2018/03/06/a-great-personality-in-the-world-what-he-use-for-his-personality/">A great personality in the world, What he use for his personality ?</a></h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium ad asperiores at atque culpa dolores eaque fugiat hic illo ipsam ipsum minima modi necessitatibus nemo officia, omnis perferendis placeat quaerat quas quis ratione rerum sint sit vitae. Animi architecto This is an example page. It’s different from a blog post because it will stay […]</p>
+
+								<a href="http://dazzlersoftware.com/demo/construction-blue/2018/03/06/a-great-personality-in-the-world-what-he-use-for-his-personality/" class="btn-read-more">Read More<i class="" aria-hidden="true"></i></a>
+
+							</div>
+						</div>
+											<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+							<div class="inner-news-box-top" id="post-100">
+																<div class="news-published">
+									<p class="news-date">
+									6									<br>
+									Mar</p>
+									<p class="news-year">
+									2018</p>
+								</div>
+								<a href="http://dazzlersoftware.com/demo/construction-blue/2018/03/06/the-ship-set-ground-on-the-shore-of-this-uncharted-desert-isle/" class="img-responsive"><img width="360" height="244" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/uploads/sites/4/2018/03/beard-2326422_1920-1-1-360x244.jpg" class="attachment-construction_zone-photo-home size-construction_zone-photo-home wp-post-image" alt="">								</a>
+															</div>
+							<div class="inner-news-box-bottom">
+								<h4><a href="http://dazzlersoftware.com/demo/construction-blue/2018/03/06/the-ship-set-ground-on-the-shore-of-this-uncharted-desert-isle/">THE SHIP SET GROUND ON THE SHORE OF THIS UNCHARTED DESERT ISLE</a></h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium ad asperiores at atque culpa dolores eaque fugiat hic illo ipsam ipsum minima modi necessitatibus nemo officia, omnis perferendis placeat quaerat quas quis ratione rerum sint sit vitae. Animi architecto This is an example page. It’s different from a blog post because it will stay […]</p>
+
+								<a href="http://dazzlersoftware.com/demo/construction-blue/2018/03/06/the-ship-set-ground-on-the-shore-of-this-uncharted-desert-isle/" class="btn-read-more">Read More<i class="" aria-hidden="true"></i></a>
+
+							</div>
+						</div>
+											<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+							<div class="inner-news-box-top" id="post-98">
+																<div class="news-published">
+									<p class="news-date">
+									6									<br>
+									Mar</p>
+									<p class="news-year">
+									2018</p>
+								</div>
+								<a href="http://dazzlersoftware.com/demo/construction-blue/2018/03/06/flipper-lives-in-a-world-of-wonder-flying-there-under-the-sea/" class="img-responsive"><img width="360" height="244" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/uploads/sites/4/2018/03/02-360x244.jpg" class="attachment-construction_zone-photo-home size-construction_zone-photo-home wp-post-image" alt="">								</a>
+															</div>
+							<div class="inner-news-box-bottom">
+								<h4><a href="http://dazzlersoftware.com/demo/construction-blue/2018/03/06/flipper-lives-in-a-world-of-wonder-flying-there-under-the-sea/">FLIPPER LIVES IN A WORLD OF WONDER FLYING THERE UNDER THE SEA</a></h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium ad asperiores at atque culpa dolores eaque fugiat hic illo ipsam ipsum minima modi necessitatibus nemo officia, omnis perferendis placeat quaerat quas quis ratione rerum sint sit vitae. Animi architecto This is an example page. It’s different from a blog post because it will stay […]</p>
+
+								<a href="http://dazzlersoftware.com/demo/construction-blue/2018/03/06/flipper-lives-in-a-world-of-wonder-flying-there-under-the-sea/" class="btn-read-more">Read More<i class="" aria-hidden="true"></i></a>
+
+							</div>
+						</div>
+								</div>
+		</div>
+	</div>
+
+ <!-- News Area End Here -->
+
+	        <footer>
+				<div class="footer-area-top section-space-b-less-30">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-b-30">
+								<aside id="media_image-2" class="widget widget_media_image"><img width="189" height="44" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/uploads/sites/4/2018/07/LOGO_01.png" class="image wp-image-110  attachment-full size-full" alt="" style="max-width: 100%; height: auto;"></aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm dipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore.</p>
+</div>
+		</aside>							</div>
+							<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-b-30">
+										<aside id="recent-posts-3" class="widget widget_recent_entries">		<h3 class="widget-title sidebar-title">Recent Post</h3>		<ul>
+											<li>
+					<a href="http://dazzlersoftware.com/demo/construction-blue/2018/03/06/a-great-personality-in-the-world-what-he-use-for-his-personality/">A great personality in the world, What he use for his personality ?</a>
+									</li>
+											<li>
+					<a href="http://dazzlersoftware.com/demo/construction-blue/2018/03/06/the-ship-set-ground-on-the-shore-of-this-uncharted-desert-isle/">THE SHIP SET GROUND ON THE SHORE OF THIS UNCHARTED DESERT ISLE</a>
+									</li>
+											<li>
+					<a href="http://dazzlersoftware.com/demo/construction-blue/2018/03/06/flipper-lives-in-a-world-of-wonder-flying-there-under-the-sea/">FLIPPER LIVES IN A WORLD OF WONDER FLYING THERE UNDER THE SEA</a>
+									</li>
+					</ul>
+		</aside>							</div>
+							<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-b-30">
+								<aside id="categories-3" class="widget widget_categories"><h3 class="widget-title sidebar-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-2"><a href="http://dazzlersoftware.com/demo/construction-blue/category/technology/">Technology</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://dazzlersoftware.com/demo/construction-blue/category/uncategorized/">Uncategorized</a>
+</li>
+		</ul>
+</aside>							</div>
+							<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-b-30">
+								<aside id="calendar-2" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>September 2018</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://dazzlersoftware.com/demo/construction-blue/2018/03/">« Mar</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="5" class="pad">&nbsp;</td><td>1</td><td>2</td>
+	</tr>
+	<tr>
+		<td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+	</tr>
+	<tr>
+		<td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td id="today">16</td>
+	</tr>
+	<tr>
+		<td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+	</tr>
+	<tr>
+		<td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+	</tr>
+	</tbody>
+	</table></div></aside>							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer-area-bottom">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+																	<span>Copyright @ dazzler software</span>
+															</div>
+						</div>
+					</div>
+				</div>
+	        </footer>
+						<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/dazzlersoftware.com\/demo\/construction-blue\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.2"></script>
+<script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/plugins/progress-bar-wp/assets/js/jquery.meanmenu.js?ver=4.9.8"></script>
+<script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/plugins/progress-bar-wp/assets/js/wow.min.js?ver=4.9.8"></script>
+<script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/plugins/progress-bar-wp/assets/js/jquery.scrollUp.min.js?ver=4.9.8"></script>
+<script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/plugins/progress-bar-wp/assets/js/waypoints.min.js?ver=4.9.8"></script>
+<script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/plugins/progress-bar-wp/assets/js/main.js?ver=4.9.8"></script><a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: none;"><i class="fa fa-angle-up"></i></a>
+<script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/themes/construction-zone/assets/js/bootstrap.js?ver=4.9.8"></script>
+<script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/themes/construction-zone/assets/js/jquery.meanmenu.js?ver=4.9.8"></script>
+<script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/themes/construction-zone/assets/js/wow.js?ver=4.9.8"></script>
+<script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/themes/construction-zone/assets/js/jquery.scrollUp.js?ver=4.9.8"></script>
+<script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/themes/construction-zone/assets/js/main.js?ver=4.9.8"></script>
+<script type="text/javascript" src="http://dazzlersoftware.com/demo/construction-blue/wp-includes/js/wp-embed.min.js?ver=4.9.8"></script>
+	        <!-- Footer Area End Here -->
+
+		<!-- Preloader Start Here -->
+	    <div id="preloader"></div>
+	    <!-- Preloader End Here -->
+
+<script>
+jQuery('nav#dropdown').meanmenu({
+
+	siteLogo: ''+
+			  '<a href="http://dazzlersoftware.com/demo/construction-blue/" class="custom-logo-link" rel="home" itemprop="url"><img width="189" height="44" src="http://dazzlersoftware.com/demo/construction-blue/wp-content/uploads/sites/4/2018/07/LOGO_01.png" class="custom-logo" alt="Construction Blue" itemprop="logo" /></a>'+
+			  ''
+
+});
+</script>
+<!--
+
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        <a class="navbar-brand" href="<%= root_url %>"/>Home</a>
 
         <% if !current_user %>
           <%= link_to 'Sign Up', new_user_path, class: "navbar-brand" %>
@@ -27,13 +521,8 @@
           <%= link_to "Log Out", logout_path, method: :post, class: "navbar-brand" %>
           <% end %>
         </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-
-          </ul>
-        </div><!--/.nav-collapse -->
       </div>
-    </div>
+    </div> -->
 
     <!-- content -->
     <div class="container"  role="main">
