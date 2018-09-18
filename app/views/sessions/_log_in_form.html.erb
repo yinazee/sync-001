@@ -1,0 +1,14 @@
+<%= form_for @user, url: login_path do |f| %>
+  <%= render 'shared/flash_messages', target: @user %>
+  <div class="field">
+    <%= f.label "Username:" %>
+    <%= f.text_field :username %><br><br>
+  </div>
+
+  <div class="field">
+  <%= f.label "Password:" %>
+  <%= f.password_field :password %><br><br>
+  </div>
+
+  <%= f.submit "Log In", class: 'btn btn-info btn-md' %>
+<% end %>

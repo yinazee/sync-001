@@ -1,0 +1,8 @@
+<div id="login" class="container">
+  <h1>Log In</h1>
+  <p>Not a member? <%= link_to "Sign up!", signup_path %></p>
+
+  <%= render 'sessions/oauth-link' %>
+
+  <%= render 'sessions/log_in_form' %>
+</div>
