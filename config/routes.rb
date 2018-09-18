@@ -1,15 +1,35 @@
 Rails.application.routes.draw do
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root "welcome#home"
+  root 'welcome#index'
 
-   get 'signin' => 'sessions#new'
-   post 'signin' => 'sessions#create'
-   post 'logout' => 'sessions#destroy'
+  get '/home', to: 'welcome#home'
 
-   resources :rides
+  get '/auth/facebook/callback' => 'sessions#create'
 
-   resources :users
-   resources :attractions
+  get '/signup', to: 'users#new'
+  post '/signup', to: 'users#create'
 
+  get 'users', to: 'users#index', as: 'users'
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+
+  namespace :artists do
+    resources :favorites, only: [:index]
+  end
+
+  namespace :artworks do
+    resources :ownerships, only: [:index]
+  end
+
+  resources :users, except: [:index]
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :artists do
+    resources :artworks
+  end
+  resources :media
+  resources :artwork_media
 end

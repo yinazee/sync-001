@@ -1,0 +1,19 @@
+<%= form_for @user do |f| %>
+
+  <div class="field">
+    <%= f.label "Name:" %>
+    <%= f.text_field :name %><br><br>
+  </div>
+
+  <div class="field">
+    <%= f.label "Username:" %>
+    <%= f.text_field :username %><br><br>
+  </div>
+
+  <div class="field">
+    <%= f.label "Password:" %>
+    <%= f.text_field :password, placeholder: "min. 5 characters" %><br><br>
+  </div>
+
+  <%= f.submit class: 'btn btn-info btn-md' %>
+<% end %>

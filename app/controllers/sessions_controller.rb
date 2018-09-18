@@ -1,21 +1,39 @@
 class SessionsController < ApplicationController
 
   def new
-    @user = User.new
-  end
+      @user = User.new
+      redirect_to user_path if logged_in?
+    end
 
-  def create
-    @user = User.find(params[:user][:name])
-    @user.try(:authenticate, params[:password])
-    render :new unless @user
+    #login through social media or signup form
+    def create
+      if auth
+        @user = User.set_user_from_omniauth(auth['uid'])
+        log_user_in
+        redirect_to artists_path(@user), flash: {success: "You're logged in through Facebook!"} #user_path(@user)
+      else
+        #find user by email
+        @user = User.find_by(email: params[:user][:email])
+        if @user && @user.authenticate(params[:user][:password])
+          log_user_in
+          # redirect_to artists_path, flash: {success: "You're logged in!"}  #user_path(@user)
+          redirect_to home_path, flash: {success: "You're logged in!"}  #user_path(@user)
+        else
+          redirect_to '/sessions/new', flash: {danger: "Invalid email/password combination!"}
+        end
+      end
+    end
 
-    session[:user_id] = @user.id
-    redirect_to user_path(current_user)
-  end
+    def destroy
+      session.clear
+      redirect_to root_path, flash: {success: "You're logged out!"}
+    end
 
-  def destroy
-    session.delete :user_id
-    redirect_to root_path
-  end
+    private
+
+      def auth
+        request.env['omniauth.auth']
+      end
+
 
 end

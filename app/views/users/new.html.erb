@@ -1,0 +1,10 @@
+<%= render 'shared/form_errors', target: @user %>
+
+<div id="add_user" class="container">
+  <h1>Create an Account</h1>
+  <p><%= link_to "Already have an Account?", login_path %></p>
+
+  <%= render 'sessions/oauth-link' %>
+
+  <%= render 'users/form' %>
+</div>
