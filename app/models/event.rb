@@ -1,5 +1,7 @@
 class Event < ApplicationRecord
-  belongs_to :user
+  belongs_to :host
+  has_many :event_guests
+  has_many :guests, through: :event_guests
 
   before_validation :make_title_case, :make_website
 

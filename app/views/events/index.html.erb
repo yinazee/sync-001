@@ -1,0 +1,15 @@
+
+    <tbody>
+
+      <% @events.each do |event| %>
+      <tr>
+
+        <td><%= link_to event.location, artist_artworks_path(a) %></td>
+        <td><%= link_to event.date, edit_artist_path(a), id:"update_artist" %></td>
+        <td><%= link_to event.description, user_path(event) %></td>
+        <td><%= link_to "Delete", a, id:"delete_event", method: :delete, data: {confirm: "Are you sure you want to delete `#{a.name}`?"} %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

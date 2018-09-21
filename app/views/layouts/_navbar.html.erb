@@ -16,7 +16,7 @@
               <li class="active">
                 <%= link_to "Home", home_path %>
                 <%= link_to "My Profile", user_path(current_user) %>
-                <%= link_to "My Events", artists_favorites_path, id: "fav_artists" %>
+                <%= link_to "My Events", events_path, id: "all_events" %>
                 <%= link_to "Create Event", artworks_ownerships_path, id: "owned_artworks" %>
                 <%= link_to logout_path, method: :delete do %>
                     <span class="glyphicon glyphicon-log-out"></span> Sign Out

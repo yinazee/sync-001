@@ -5,8 +5,7 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.string :location
       t.string :date
       t.string :description
-
-      t.belongs_to :user, foreign_key: true
+      t.integer :host_id
 
       t.timestamps null:false
     end

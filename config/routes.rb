@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root 'welcome#index'
+  root 'welcome#home'
 
   get '/home', to: 'welcome#home'
 
@@ -13,23 +13,18 @@ Rails.application.routes.draw do
 
   get 'users', to: 'users#index', as: 'users'
 
+
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  namespace :artists do
-    resources :favorites, only: [:index]
-  end
 
   namespace :artworks do
     resources :ownerships, only: [:index]
   end
 
+  resources :events
   resources :users, except: [:index]
   resources :sessions, only: [:new, :create, :destroy]
-  resources :artists do
-    resources :artworks
-  end
-  resources :media
-  resources :artwork_media
+
 end
